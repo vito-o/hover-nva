@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hover-nav</title>
+    <style type="text/css">
+        *{margin:0;padding:0}
+        article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+        header{
+            overflow: hidden;
+            box-shadow: 0 0 10px 1px #cccccc;
+            font-family: 微软雅黑;
+        }
+
+        header ul{
+            width:350px;
+            margin:30px auto 0;
+            zoom: 1;
+            position:relative;
+        }
+
+        header ul:after{
+            display: block;
+            content: '';
+            clear: both;
+            visibility: hidden;
+            height:0;
+        }
+
+        header ul li{
+            height:35px;
+            line-height:35px;;
+            padding:0 10px;
+            float:left;
+            list-style: none;
+        }
+
+        header ul li.hover-bar{
+            position: absolute;
+            width: 32px;
+            height:33px;
+            padding:0;
+            left:10px;
+            top:0;
+            border-bottom:2px solid orange;
+            z-index: 10;
+
+            transition: all 1s;
+            -moz-transition: all 1s; /* Firefox 4 */
+            -webkit-transition: all 1s; /* Safari 和 Chrome */
+            -o-transition: all 1s; /* Opera */
+        }
+
+        header ul li a{
+            text-decoration: none;
+            color: #03A9F4;
+        }
+
+        .warp{
+            margin-top: 20px;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">科技</a></li>
+                <li><a href="">娱乐生活</a></li>
+                <li><a href="">文化</a></li>
+                <li><a href="">设计站</a></li>
+                <li class="hover-bar"></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="warp">内容区域</div>
+    <script src="index.js"></script>
+</body>
+</html>
